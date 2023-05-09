@@ -22,3 +22,61 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+.task-three-image {
+  max-width: 360px;
+} 
+
+.task-three-image:first-child {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 250px;
+  display: block;
+}
+
+.task-three-item {
+  list-style: none;
+  border: 2px dashed aquamarine;
+  margin-right: 16px;
+}
+
+.task-three-item:last-child {
+  margin-right: 0;
+}
+
+.task-three-body {
+  background-color: #212121;
+  margin: 0;
+  padding: 36px 120px 26px 120px;
+}
+
+.task-three-a {
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: 500;
+}
+
+.task-three-a:hover {
+  color: aquamarine;
+}
+
+.gallery {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  max-width: 1360px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: grey;
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.task-three-p {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
