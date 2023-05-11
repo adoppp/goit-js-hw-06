@@ -7,10 +7,14 @@ const ingredients = [
   'Condiments',
 ];
 
-let ul = document.querySelector('#ingredients');
-let li = document.createElement("li");
+const list = document.querySelector('#ingredients')
+const liArray = []
 
-document.querySelector('#ingredients').insertAdjacentHTML('beforeend', ingredients
-  .map(n => `<li>${n}</li>`)
-  .join('')
-);
+ingredients.forEach(ingredient => {
+	const item = document.createElement('li')
+	item.className = 'item'
+	item.textContent = ingredient
+	liArray.push(item)
+})
+
+list.append(...liArray)

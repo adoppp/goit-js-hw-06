@@ -1,22 +1,7 @@
-const ulChildsSum = document.querySelector('#categories').children.length;
-console.log(`Number of categories: ${ulChildsSum}`);
+const categoriesList = document.querySelectorAll('.item');
+console.log(`Number of categories: ${categoriesList.length}`)
 
-let category = document.getElementsByTagName('h2')['0'].textContent;
-console.log(`Category: ${category}`)
-
-let sumOfElements = document.getElementsByTagName('ul')['1'].children.length;
-console.log(`Elements: ${sumOfElements}`)
-
-category = document.getElementsByTagName('h2')['1'].textContent;
-console.log(`Category: ${category}`)
-
-sumOfElements = document.getElementsByTagName('ul')['2'].children.length;
-console.log(`Elements: ${sumOfElements}`)
-
-category = document.getElementsByTagName('h2')['2'].textContent;
-console.log(`Category: ${category}`)
-
-
-sumOfElements = document.getElementsByTagName('ul')['3'].children.length;
-console.log(`Elements: ${sumOfElements}`)
-
+categoriesList.forEach(item => {
+    console.log(`Category: ${item.firstElementChild.textContent}`);
+    console.log(`Elements: ${item.lastElementChild.children.length}`)
+});

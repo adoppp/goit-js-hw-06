@@ -1,17 +1,15 @@
-let containerValue = document.getElementById("value");
+let counterValue = 0
 
-document.getElementById("increment").onclick = function () {
-    let countPlus = containerValue.innerHTML;
-    if(+countPlus <= 10000){
-        containerValue.innerHTML++;
-        let countPlus = containerValue.innerHTML;
-    }
-}
+const displayCounter = document.querySelector('#value')
+const buttonMinus = document.querySelector('button[data-action="decrement"]')
+const buttonPlus = document.querySelector('button[data-action="increment"]')
 
-document.getElementById("decrement").onclick = function() {
-    let countMinus = containerValue.innerHTML;
-    if(+countMinus >= -10000){
-        containerValue.innerHTML--;
-      let countMinus = containerValue.innerHTML;
-    }
-  }
+buttonMinus.addEventListener('click', () => {
+	counterValue--
+	displayCounter.textContent = counterValue
+})
+
+buttonPlus.addEventListener('click', () => {
+	counterValue++
+	displayCounter.textContent = counterValue
+})
